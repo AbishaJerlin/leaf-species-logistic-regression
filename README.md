@@ -117,7 +117,9 @@ I also found the decision boundary plots useful because they made the difference
 
 ## Data
 
-The original notebook reads from `leaf_data.csv`. The dataset was not present in the files I still had when preparing this repository, so it is not included here.
+## Data
+
+The dataset used for the analysis is available in `data/leaf_data.csv`.
 
 ## License
 
