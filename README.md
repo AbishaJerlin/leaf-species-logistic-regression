@@ -1,8 +1,8 @@
 # Leaf Species Classification with Logistic Regression
 
-This repository contains my university Statistical Data Science coursework on classifying two leaf species using leaf length and leaf width.
+This repository contains my Statistical Data Science coursework on classifying two leaf species using leaf length and leaf width.
 
-I compared a standard logistic regression model with polynomial logistic regression models of degree 2 to degree 5. The aim was to see how increasing model complexity changed both classification performance and the shape of the decision boundary.
+I compared a standard logistic regression model with polynomial logistic regression models from degree 2 to degree 5. The aim was to see how increasing model complexity affected classification performance and the shape of the decision boundary.
 
 ## What I did
 
@@ -16,7 +16,7 @@ The analysis includes:
 - evaluating the models using accuracy, Kappa, sensitivity and specificity
 - comparing decision boundaries
 - plotting ROC curves
-- checking how model complexity affected overfitting
+- checking how increasing model complexity affected performance and overfitting
 
 ## Main result
 
@@ -30,7 +30,7 @@ The degree 4 polynomial logistic regression model gave the strongest test perfor
 | Degree 4 | **91.06%** |
 | Degree 5 | 87.80% |
 
-The results showed that adding some non-linearity improved classification, but the degree 5 model became too flexible and performed worse on the test data.
+The results showed that adding non-linearity improved classification up to degree 4. The degree 5 model then performed worse on the test data, suggesting that the additional complexity did not improve generalisation.
 
 ## Technologies used
 
@@ -47,19 +47,19 @@ The results showed that adding some non-linearity improved classification, but t
 
 ```text
 leaf-species-logistic-regression/
-├── notebooks/
-│   └── leaf_species_analysis.ipynb
 ├── data/
 │   └── leaf_data.csv
+├── notebooks/
+│   └── leaf_species_analysis.ipynb
 ├── images/
-│       ├── leaf-length-width-scatter.png
-│       ├── linear-decision-boundary.png
-│       ├── degree4-decision-boundary.png
-│       ├── degree5-decision-boundary.png
-│       ├── leaf-density-plots.png
-│       ├── model-accuracy-comparison.png
-│       ├── model-performance-metrics.png
-│       └── roc-curves.png
+│   ├── leaf-length-width-scatter.png
+│   ├── linear-decision-boundary.png
+│   ├── degree4-decision-boundary.png
+│   ├── degree5-decision-boundary.png
+│   ├── leaf-density-plots.png
+│   ├── model-accuracy-comparison.png
+│   ├── model-performance-metrics.png
+│   └── roc-curves.png
 ├── .gitignore
 ├── LICENSE
 └── README.md
@@ -89,15 +89,21 @@ leaf-species-logistic-regression/
 
 ## Running the notebook
 
-The notebook uses R and expects the dataset to be available as:
+The analysis notebook is available at:
 
-```text
-leaf_data.csv
+`notebooks/leaf_species_analysis.ipynb`
+
+The dataset is stored at:
+
+`data/leaf_data.csv`
+
+When running the notebook from the `notebooks` folder, the dataset can be loaded using:
+
+```r
+data_6908119 <- read.csv("../data/leaf_data.csv")
 ```
 
-Place the CSV file inside the working directory used by the notebook, or update the `read.csv()` path before running it.
-
-The main packages used are:
+The main packages used in the analysis are:
 
 ```r
 library(ggplot2)
@@ -106,17 +112,23 @@ library(pROC)
 library(patchwork)
 ```
 
+Open the notebook in Jupyter Notebook or JupyterLab and run the cells in order to reproduce the analysis and visualisations.
+
 ## What I learned
 
-This coursework helped me understand how model complexity affects classification. The linear model was useful as a baseline, but it could not fully capture the curved separation between the two species.
+This coursework helped me understand how model complexity affects classification performance.
 
-The polynomial models improved the fit up to degree 4. Degree 5 then lost performance on the test set, which showed how adding extra complexity can lead to overfitting rather than better generalisation.
+The linear logistic regression model gave me a useful baseline, but it could not fully capture the curved separation between the two species. Adding polynomial terms improved the model up to degree 4.
 
-I also found the decision boundary plots useful because they made the difference between underfitting, a good fit and overfitting much easier to see than using accuracy alone.
+The degree 5 model then performed worse on the test data, which showed that making a model more complex does not always improve its ability to generalise.
+
+The decision boundary plots were also useful because they made it easier to visually compare how each model separated the two species. Looking at these plots alongside accuracy, sensitivity, specificity and ROC curves gave a clearer picture of overall model performance.
 
 ## Data
 
-The dataset used for the analysis is available in `data/leaf_data.csv`.
+The dataset used for this analysis is included in `data/leaf_data.csv`.
+
+It contains leaf length, leaf width and species information used to train and evaluate the classification models.
 
 ## License
 
