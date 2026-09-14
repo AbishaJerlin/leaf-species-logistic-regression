@@ -51,8 +51,7 @@ leaf-species-logistic-regression/
 │   └── leaf_species_analysis.ipynb
 ├── data/
 │   └── leaf_data.csv
-├── docs/
-│   └── images/
+├── images/
 │       ├── leaf-length-width-scatter.png
 │       ├── linear-decision-boundary.png
 │       ├── degree4-decision-boundary.png
