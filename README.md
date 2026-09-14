@@ -1,6 +1,6 @@
 # Leaf Species Classification with Logistic Regression
 
-This repository contains my COMM071 Statistical Data Science coursework on classifying two leaf species using leaf length and leaf width.
+This repository contains my university Statistical Data Science coursework on classifying two leaf species using leaf length and leaf width.
 
 I compared a standard logistic regression model with polynomial logistic regression models of degree 2 to degree 5. The aim was to see how increasing model complexity changed both classification performance and the shape of the decision boundary.
 
@@ -50,7 +50,7 @@ leaf-species-logistic-regression/
 ├── notebooks/
 │   └── leaf_species_analysis.ipynb
 ├── data/
-│   └── README.md
+│   └── leaf_data.csv
 ├── docs/
 │   └── images/
 │       ├── leaf-length-width-scatter.png
