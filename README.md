@@ -70,23 +70,23 @@ leaf-species-logistic-regression/
 
 ### Leaf measurements
 
-![Leaf length and width scatter plot](docs/images/leaf-length-width-scatter.png)
+<img width="840" height="840" alt="leaf-length-width-scatter" src="https://github.com/user-attachments/assets/cdde39b2-9de9-4e79-9f64-d5b7580df94f" />
 
 ### Degree 4 decision boundary
 
-![Degree 4 decision boundary](docs/images/degree4-decision-boundary.png)
+<img width="840" height="840" alt="degree4-decision-boundary" src="https://github.com/user-attachments/assets/5654c69d-b057-4c90-9f65-a2c58e466fe0" />
 
 ### Degree 5 decision boundary
 
-![Degree 5 decision boundary](docs/images/degree5-decision-boundary.png)
+<img width="840" height="840" alt="degree5-decision-boundary" src="https://github.com/user-attachments/assets/56f9066d-531a-4420-b0d5-155db309e98b" />
 
 ### Accuracy comparison
 
-![Model accuracy comparison](docs/images/model-accuracy-comparison.png)
+<img width="840" height="840" alt="model-accuracy-comparison" src="https://github.com/user-attachments/assets/6b54d8ef-a256-4087-afde-87c8f8fad80d" />
 
 ### ROC curves
 
-![ROC curves](docs/images/roc-curves.png)
+<img width="840" height="840" alt="roc-curves" src="https://github.com/user-attachments/assets/628f415b-079e-49b2-aee6-d7459eef2c34" />
 
 ## Running the notebook
 
@@ -114,8 +114,6 @@ This coursework helped me understand how model complexity affects classification
 The polynomial models improved the fit up to degree 4. Degree 5 then lost performance on the test set, which showed how adding extra complexity can lead to overfitting rather than better generalisation.
 
 I also found the decision boundary plots useful because they made the difference between underfitting, a good fit and overfitting much easier to see than using accuracy alone.
-
-## Data
 
 ## Data
 
